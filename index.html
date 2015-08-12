@@ -1,0 +1,11 @@
+---
+layout:default
+title:Blog
+---
+<h2>{{page.title}}</h2>
+<p>zuixinwenzhang</p>
+<ul>
+{% for post in site.post %}
+<li>{{post.date|date_to_string}}<a href="{{site.base.url}}{{post.url}}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
